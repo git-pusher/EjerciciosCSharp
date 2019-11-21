@@ -1,4 +1,4 @@
-﻿
+﻿using CoreEscuela.Util;
 using CoreEscuela.Entidades;
 using static System.Console;
 
@@ -12,22 +12,22 @@ namespace CoreEscuela
             //y se inicializan de esta forma aquí
             var engine = new EscuelaEngine();
             engine.Inicializar();
-
-            WriteLine("*****************************************************");
+            //se importa el namespace de Util para usar Printer
+            Printer.WriteTitle("BIENVENIDOS A LA ESCUELA");
+            Printer.Beep(10000, cantidad:3);
             ImprimirCursosEscuela(engine.Escuela);
-            WriteLine("*****************************************************");
         }
         private static void ImprimirCursosEscuela(Escuela escuela)
         {
-            WriteLine("=====================\nCursos de la escuela\n====================="); 
+            Printer.WriteTitle("Cursos Escuela");
             // if(escuela != null && escuela.Cursos != null) 
-            if(escuela?.Cursos != null) 
-            {               
+            if (escuela?.Cursos != null)
+            {
                 foreach (var curso in escuela.Cursos)
                 {
                     WriteLine($"Nombre: {curso.Nombre}, Id: {curso.UniqueId} ");
                 }
             }
-        }        
+        }
     }
 }
