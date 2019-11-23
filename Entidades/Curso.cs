@@ -8,7 +8,7 @@ namespace CoreEscuela.Entidades
         public string UniqueId { get; private set; }
         public string Nombre { get; set; }
         public TiposJornada Jornada { get; set; }
-        public List<Asignatura> Asignaturas { get; set;}
+        public List<Asignatura> Asignaturas { get; set; }
         public List<Alumno> Alumnos { get; set;}
 
         // Este constructor es igual que el de abajo
