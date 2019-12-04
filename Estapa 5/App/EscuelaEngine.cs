@@ -7,7 +7,12 @@ namespace CoreEscuela
 {
     public class EscuelaEngine
     {
-        public Escuela Escuela { get; set; }
+        public EscuelaEngine(Escuela escuela) 
+        {
+            this.Escuela = escuela;
+               
+        }
+                public Escuela Escuela { get; set; }
         public EscuelaEngine()
         {
         }
@@ -75,12 +80,11 @@ namespace CoreEscuela
 
         private void CargarEvaluaciones()
         {
-            var lista = new List<Evaluacion>();
+            //var lista = new List<Evaluacion>();
             foreach (var curso in Escuela.Cursos)
             {
                 foreach (var asignatura in curso.Asignaturas)
-                {
-                    
+                {                    
                     foreach (var alumno in curso.Alumnos)
                     {
                         var rnd = new Random(System.Environment.TickCount);
@@ -93,7 +97,8 @@ namespace CoreEscuela
                                 Nota = (float)(5 * rnd.NextDouble()),
                                 Alumno = alumno
                             };
-                            lista.Add(ev);
+                            alumno.Evaluaciones.Add(ev);
+                            //lista.Add(ev);
                         }
                     }
                 }
