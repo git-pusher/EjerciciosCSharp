@@ -7,7 +7,7 @@ namespace CoreEscuela.Util
    public static class Printer
    {
        //recibe comoparámetro el tamaño de la línea, por defecto será 10
-       public static void DibujarLinea(int tam = 10)
+       public static void DrawLine(int tam = 10)
        {
            //Padleft rellenará de acuerdo a los parámetros que se le pasen
            WriteLine("".PadLeft(tam, '='));
@@ -16,10 +16,10 @@ namespace CoreEscuela.Util
        {
            var tamaño = titulo.Length + 4;
            //Dibujamos una línea del tamaño de la cadena titulo
-           DibujarLinea(tamaño);
+           DrawLine(tamaño);
            //string literals
             WriteLine($"| {titulo} |");
-           DibujarLinea(tamaño);
+           DrawLine(tamaño);
        }
 
        public static void Beep(int hz = 2000, int tiempo = 500, int cantidad = 1)

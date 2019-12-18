@@ -5,7 +5,8 @@ using CoreEscuela.Entidades;
 
 namespace CoreEscuela
 {
-    public class EscuelaEngine
+    //Clase sellada: Puedo crear instancias de la clase, pero no heredar
+    public  sealed class EscuelaEngine
     {
         public EscuelaEngine(Escuela escuela) 
         {
@@ -98,7 +99,6 @@ namespace CoreEscuela
                                 Alumno = alumno
                             };
                             alumno.Evaluaciones.Add(ev);
-                            //lista.Add(ev);
                         }
                     }
                 }

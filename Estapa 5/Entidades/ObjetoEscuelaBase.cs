@@ -2,7 +2,8 @@ using   System;
 
 namespace CoreEscuela.Entidades
 {
-    public class ObjetoEscuelaBase
+    //Calse abstracta: no puedo crear objetos de una clase abstracta, sólo hereda
+    public  class ObjetoEscuelaBase
     {
         public string UniqueId { get; private set; }
         public string Nombre { get; set; }
