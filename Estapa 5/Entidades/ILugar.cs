@@ -6,4 +6,5 @@ namespace CoreEscuela.Entidades
         string Direccion { get; set; }
 
         void LimpiarLugar();
+    }
 }
